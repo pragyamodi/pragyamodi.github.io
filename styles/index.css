@@ -1,0 +1,39 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#main-content a {
+  display: inline-block;
+  padding: 16px;
+  margin: 16px;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#main-content a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#cv-link {
+  background-size: contain;
+  background-position: center;
+}
+
+#blog-link {
+  background-size: contain;
+  background-position: center;
+}
