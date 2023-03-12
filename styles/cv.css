@@ -13,18 +13,18 @@ body {
 
 /* Style the vertical navigation */
 .nav {
-  width: 16rem;
+  height: 100%;
+  width: 20%;
   background-color: #292929;
   color: #fff;
   padding: 1rem;
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
   padding-top: 0%;
   overflow-y: auto;
   transition: all 0.3s ease-in-out;
 }
+
 
 .nav:hover {
   width: 20rem;
@@ -71,18 +71,17 @@ body {
 /* Style the main content */
 .main {
   padding: 4rem;
-  margin-left: 16rem;
+  margin-left: 20%;
   transition: all 0.3s ease-in-out;
 }
 
+
 .container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  /* background-color: #ffffff; */
-  /* border-radius: 0.5rem; */
-  /* box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); */
 }
+
 
 .header {
   font-size: 2rem;
@@ -212,5 +211,58 @@ body {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    padding: 0.5rem;
+  }
+
+  .nav h2 {
+    font-size: 1.1rem;
+  }
+
+  .section-header {
+    font-size: 1.5rem;
+  }
+
+  .section-subheader {
+    font-size: 1.1rem;
+  }
+
+  .section-subtext {
+    font-size: 0.9rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+
+  .contact-header {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    width: 100%;
+    left: -100%;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav:hover {
+    left: 0;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 2rem;
   }
 }
