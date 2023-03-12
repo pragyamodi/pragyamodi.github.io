@@ -1,35 +1,50 @@
 /* Set height of body to full height of viewport */
 body {
   height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  background-color: #f9f9f9;
 }
 
 .nav a {
   color: #ffffff;
   text-decoration: none;
-
 }
 
 /* Style the vertical navigation */
 .nav {
   width: 16rem;
-  background-color: #1a202c;
+  background-color: #292929;
   color: #fff;
   padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
+  padding-top: 0%;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav:hover {
+  width: 20rem;
 }
 
 .nav img {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav:hover img {
+  transform: rotate(360deg);
 }
 
 .nav h2 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin: 0.5rem 0;
   text-align: center;
@@ -44,25 +59,29 @@ body {
 .nav li {
   cursor: pointer;
   padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
   border-radius: 0.25rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav li:hover {
-  background-color: #2d3748;
+  background-color: #404040;
 }
 
 /* Style the main content */
 .main {
-  padding: 1rem;
+  padding: 4rem;
   margin-left: 16rem;
+  transition: all 0.3s ease-in-out;
 }
-
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  /* background-color: #ffffff; */
+  /* border-radius: 0.5rem; */
+  /* box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); */
 }
 
 .header {
@@ -72,70 +91,30 @@ body {
   margin-bottom: 1rem;
 }
 
-.profile-pic {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-/*
-.section {
-  margin-bottom: 2rem;
-}
-
-.section-header {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.section-subheader {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.section-text {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.section-subtext {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  font-style: italic;
-}
-
-.section-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.section-item {
-  margin-bottom: 0.5rem;
-}
-
-Add Tailwind CSS utility classes as needed */
-
 /* Styling for research projects section */
 .section {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 2rem;
   border-radius: 0.5rem;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
+.section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Section styling */
 .section-header {
   font-size: 2rem;
-  margin-bottom: 1rem;
   font-weight: bold;
+  margin-bottom: 1rem;
   text-align: center;
+  animation: slide-up 0.8s ease;
 }
 
 .section-list {
@@ -147,6 +126,7 @@ Add Tailwind CSS utility classes as needed */
 .section-item {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  animation: slide-up 0.8s ease;
 }
 
 .section-subheader {
@@ -166,47 +146,71 @@ Add Tailwind CSS utility classes as needed */
   margin-top: 1rem;
 }
 
-/* Set height of body to full height of viewport */
-body {
-  height: 100vh;
+/* Contact section styling */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
 }
 
-/* Style the vertical navigation */
-.nav {
-  width: 16rem;
-  background-color: #1a202c;
-  color: #fff;
-  padding: 1rem;
+.contact-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: slide-up 0.8s ease;
 }
 
-.nav img {
-  width: 4rem;
-  height: 4rem;
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.nav h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0.5rem 0;
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 3rem;
+  animation: slide-up 0.8s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.contact-item:hover {
+  transform: scale(1.2);
 }
 
-.nav li {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.1rem;
+.contact-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  animation: zoom-in 0.6s ease;
 }
 
-.nav li:hover {
-  background-color: #2d3748;
+
+/* Animations */
+@keyframes slide-up {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
-/* Style the main content */
-.main {
-  padding: 4rem;
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
