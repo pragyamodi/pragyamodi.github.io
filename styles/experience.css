@@ -1,0 +1,325 @@
+/* Experience page styles */
+.experience-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 20px;
+  display: flex;
+  gap: 2rem;
+}
+
+.experience-nav {
+  width: 250px;
+  position: sticky;
+  top: 80px;
+  /* Adjust based on your header height */
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.experience-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.experience-nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--light-text-color);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--accent-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.experience-nav a:hover,
+.experience-nav a:focus,
+.experience-nav a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.experience-nav a:hover::before,
+.experience-nav a:focus::before,
+.experience-nav a.active::before {
+  transform: scaleY(1);
+}
+
+.experience-nav a.active {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-section {
+  background-color: var(--card-background);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.experience-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Rest of your existing styles for experience sections */
+
+@media (max-width: 768px) {
+  .experience-content {
+    flex-direction: column;
+  }
+
+  .experience-nav {
+    width: 100%;
+    position: static;
+    margin-bottom: 2rem;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .experience-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .experience-nav li {
+    margin-bottom: 0;
+  }
+
+  .experience-nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.experience-section {
+  background-color: var(--card-background);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.experience-section h3 i {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--secondary-color);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.timeline-item h4 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-item {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-category li {
+  margin-bottom: 0.5rem;
+}
+
+.awards-list,
+.certifications-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.awards-list li,
+.certifications-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.awards-list li::before,
+.certifications-list li::before {
+  content: '•';
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.skills-section,
+.projects-section {
+  margin-bottom: 3rem;
+}
+
+.skills-section h2,
+.projects-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card,
+.project-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3,
+.project-card h3 {
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.skill-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.project-card p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-nav {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

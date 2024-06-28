@@ -1,12 +1,126 @@
-\
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pragya Modi - AI & Mental Health Innovator</title>
+  <title>Pragya Modi - AI Researcher & Mental Health Innovator</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Timeline styles */
+    .timeline {
+      padding: 4rem 0;
+      background-color: var(--background-color);
+    }
+
+    .timeline h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary-color);
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: var(--secondary-color);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      width: 50%;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: var(--accent-color);
+      border-radius: 50%;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      right: -8px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -8px;
+    }
+
+    .timeline-content {
+      padding: 1.5rem;
+      background: var(--card-background);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: 2rem;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 2rem;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-content h3 {
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-wrapper::before {
+        left: 0;
+      }
+
+      .timeline-item {
+        width: 100%;
+        left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+
+      .timeline-dot {
+        left: -8px;
+      }
+
+      .timeline-content {
+        margin-left: 2rem !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,74 +138,166 @@
     </div>
   </header>
 
-  <main class="container main-content">
-    <aside class="timeline">
-      <h3>Timeline</h3>
-      <ul>
-        <li>
-          <span class="date">2023 - Present</span>
-          <p>MSc Artificial Intelligence, University of Edinburgh</p>
-        </li>
-        <li>
-          <span class="date">2023 - Present</span>
-          <p>Digital Skills Trainer, University of Edinburgh</p>
-        </li>
-        <li>
-          <span class="date">2020 - 2023</span>
-          <p>BSc Psychology, Arden University</p>
-        </li>
-        <li>
-          <span class="date">2019 - 2022</span>
-          <p>BSc Computer Science, University of London</p>
-        </li>
-      </ul>
-    </aside>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Bridging AI and Mental Health</h2>
+        <p>MSc Artificial Intelligence student at the University of Edinburgh, dedicated to pioneering innovative
+          solutions at the intersection of technology and mental wellbeing.</p>
+        <a href="#interests" class="cta-button">Explore My Interests</a>
+      </div>
+    </section>
 
-    <div class="content">
-      <section class="intro">
-        <h2>AI Researcher & Mental Health Advocate</h2>
-        <p>MSc Artificial Intelligence student at the University of Edinburgh, dedicated to pioneering mental health
-          solutions through AI.</p>
-      </section>
+    <section class="overview">
+      <div class="container">
+        <h2>At a Glance</h2>
+        <div class="overview-grid">
+          <div class="overview-item">
+            <i class="fas fa-brain"></i>
+            <h3>AI Researcher</h3>
+            <p>Focused on machine learning and neural networks for healthcare applications</p>
+          </div>
+          <div class="overview-item">
+            <i class="fas fa-heart"></i>
+            <h3>Mental Health Advocate</h3>
+            <p>Passionate about leveraging technology to improve mental health care and accessibility</p>
+          </div>
+          <div class="overview-item">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Software Developer</h3>
+            <p>Experienced in creating innovative software solutions for real-world problems</p>
+          </div>
+          <div class="overview-item">
+            <i class="fas fa-users"></i>
+            <h3>Interdisciplinary Collaborator</h3>
+            <p>Bridging the gap between computer science, psychology, and healthcare</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="about">
-        <h3>About Me</h3>
-        <p>With a background in psychology and computer science, I bring a unique interdisciplinary approach to AI
-          research. My work focuses on developing innovative tools for mental health care, combining expertise in
-          machine learning, data analysis, and human cognition.</p>
-      </section>
+    <section class="timeline">
+      <div class="container">
+        <h2>My Journey</h2>
+        <div class="timeline-wrapper">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2023 - Present</h3>
+              <h4>MSc Artificial Intelligence</h4>
+              <p>University of Edinburgh</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2023 - Present</h3>
+              <h4>Digital Skills Trainer</h4>
+              <p>University of Edinburgh</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2020 - 2023</h3>
+              <h4>BSc Psychology</h4>
+              <p>Arden University</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2019 - 2022</h3>
+              <h4>BSc Computer Science</h4>
+              <p>University of London</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="current-work">
-        <h3>Current Work</h3>
-        <ul>
-          <li>Researching dynamic systems modeling of neural data</li>
-          <li>Developing deep learning models for early Alzheimer's diagnosis</li>
-          <li>Exploring AI applications in neuropsychological assessment</li>
-        </ul>
-      </section>
+    <section id="interests" class="interests">
+      <div class="container">
+        <h2>Research Interests</h2>
+        <div class="interests-grid">
+          <div class="interest-item">
+            <h3>AI in Mental Health Care</h3>
+            <p>Exploring how artificial intelligence can revolutionize mental health diagnosis, treatment, and support
+              systems.</p>
+          </div>
+          <div class="interest-item">
+            <h3>Neural Data Analysis</h3>
+            <p>Developing advanced algorithms for analyzing and interpreting complex neural data to gain insights into
+              brain function and disorders.</p>
+          </div>
+          <div class="interest-item">
+            <h3>Ethical AI in Healthcare</h3>
+            <p>Investigating the ethical implications of AI integration in healthcare and developing frameworks for
+              responsible implementation.</p>
+          </div>
+          <div class="interest-item">
+            <h3>Cognitive Computing</h3>
+            <p>Researching cognitive architectures and models to create more human-like artificial intelligence systems.
+            </p>
+          </div>
+          <div class="interest-item">
+            <h3>Neurodegenerative Disease Prediction</h3>
+            <p>Applying machine learning techniques for early detection and progression modeling of neurodegenerative
+              diseases like Alzheimer's.</p>
+          </div>
+          <div class="interest-item">
+            <h3>Human-AI Interaction</h3>
+            <p>Studying the psychological aspects of human-AI interaction to design more effective and empathetic AI
+              systems for mental health support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="interests">
-        <h3>Research Interests</h3>
-        <ul>
-          <li>AI applications in mental health care</li>
-          <li>Ethical implications of AI in healthcare</li>
-          <li>Cognitive neuroscience and AI integration</li>
-          <li>Interdisciplinary approaches to complex health issues</li>
-        </ul>
-      </section>
+    <section class="featured-work">
+      <div class="container">
+        <h2>Featured Work</h2>
+        <div class="work-slider">
+          <div class="work-item">
+            <h3>Deep Learning for Alzheimer's Prediction</h3>
+            <p>Developed a multi-input deep learning graph model achieving 95.51% accuracy in Alzheimer's
+              classification.</p>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+          <div class="work-item">
+            <h3>Gaming and Mental Health</h3>
+            <p>Conducted qualitative research on the impact of gaming on adolescents, providing insights into
+              parent-child relationships and gaming effects.</p>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+          <div class="work-item">
+            <h3>Self-Care Application</h3>
+            <p>Created 'Explore', a personalized self-care application using AI-driven recommendations to promote mental
+              wellbeing.</p>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="connect">
-        <h3>Let's Connect</h3>
-        <p>I'm always eager to collaborate on innovative projects or discuss ideas at the intersection of AI and mental
-          health. Feel free to reach out!</p>
+    <section class="call-to-action">
+      <div class="container">
+        <h2>Let's Innovate Together</h2>
+        <p>Interested in collaborating on projects at the intersection of AI and mental health? I'm always open to new
+          ideas and partnerships.</p>
         <a href="contact.html" class="cta-button">Get in Touch</a>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
       <p>© 2024 Pragya Modi | Transforming mental health through AI, one algorithm at a time.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pragya-modi-873495137/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/pragyamodi" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/pragyamodi9" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
   </footer>
 </body>

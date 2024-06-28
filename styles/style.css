@@ -1,3 +1,5 @@
+/* Styles for the redesigned index page */
+
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -6,7 +8,6 @@
   --text-color: #34495e;
   --light-text-color: #fff;
   --card-background: #fff;
-  --timeline-color: #bdc3c7;
 }
 
 body {
@@ -24,11 +25,13 @@ body {
   padding: 0 20px;
 }
 
+/* Header styles */
 header {
   background-color: var(--primary-color);
-  color: var(--light-text-color);
   padding: 1rem 0;
-  margin-bottom: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,7 +44,7 @@ header .container {
 header h1 {
   color: var(--light-text-color);
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 nav ul {
@@ -66,140 +69,204 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-.experience-container {
-  display: flex;
-  gap: 40px;
+/* Hero section styles */
+.hero {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 8rem 0 4rem;
+  text-align: center;
 }
 
-.section-nav {
-  flex: 0 0 250px;
-  position: sticky;
-  top: 20px;
-  align-self: flex-start;
-  background-color: var(--card-background);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.section-nav h3 {
-  margin-top: 0;
-  color: var(--primary-color);
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
 
-.section-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.section-nav li {
-  margin-bottom: 10px;
-}
-
-.section-nav a {
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent-color);
+  color: var(--light-text-color);
   text-decoration: none;
-  color: var(--text-color);
-  transition: color 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
-.section-nav a:hover {
-  color: var(--secondary-color);
+.cta-button:hover {
+  background-color: #c0392b;
 }
 
-.experience-content {
-  flex: 1;
-}
-
-.experience-section {
+/* Overview section styles */
+.overview {
+  padding: 4rem 0;
   background-color: var(--card-background);
-  padding: 30px;
-  margin-bottom: 30px;
+}
+
+.overview h2,
+.interests h2,
+.featured-work h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.overview-item {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.overview-item:hover {
+  transform: translateY(-5px);
+}
+
+.overview-item i {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.overview-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Interests section styles */
+.interests {
+  padding: 4rem 0;
+  background-color: var(--background-color);
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.interest-item {
+  background-color: var(--card-background);
+  padding: 1.5rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-section h2 {
-  color: var(--primary-color);
-  margin-top: 0;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 10px;
+.interest-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.experience-section h2 i {
-  margin-right: 10px;
+.interest-item h3 {
   color: var(--secondary-color);
+  margin-bottom: 0.5rem;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 30px;
+/* Featured work section styles */
+.featured-work {
+  padding: 4rem 0;
+  background-color: var(--card-background);
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--timeline-color);
+.work-slider {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 30px;
+.work-item {
+  flex: 0 0 300px;
+  margin-right: 2rem;
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 5px;
+  scroll-snap-align: start;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -34px;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.work-item h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Call to action section styles */
+.call-to-action {
   background-color: var(--secondary-color);
-  border: 2px solid var(--timeline-color);
+  color: var(--light-text-color);
+  padding: 4rem 0;
+  text-align: center;
 }
 
-.timeline-item h3 {
-  color: var(--secondary-color);
-  margin-bottom: 5px;
+.call-to-action h2 {
+  margin-bottom: 1rem;
 }
 
-.timeline-item p {
-  margin-top: 0;
-  color: var(--text-color);
-  font-style: italic;
+.call-to-action p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
 }
 
+/* Footer styles */
 footer {
   background-color: var(--primary-color);
   color: var(--light-text-color);
+  padding: 2rem 0;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
 }
 
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--light-text-color);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-  .experience-container {
-    flex-direction: column;
+  .hero {
+    padding: 6rem 0 3rem;
   }
 
-  .section-nav {
-    position: static;
-    margin-bottom: 20px;
+  .hero h2 {
+    font-size: 2rem;
   }
 
-  .timeline::before {
-    left: 15px;
+  .overview-grid,
+  .interests-grid {
+    grid-template-columns: 1fr;
   }
 
-  .timeline-item::before {
-    left: -19px;
-  }
-
-  .timeline {
-    padding-left: 45px;
+  .work-item {
+    flex: 0 0 250px;
   }
 }
