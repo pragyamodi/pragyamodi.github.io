@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragya Modi - Let's Connect</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    .contact-container {
+      background-color: var(--card-background);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      margin: 30px auto;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-header h2 {
+      color: var(--primary-color);
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .contact-header p {
+      font-size: 1.1em;
+      color: var(--secondary-color);
+    }
+
+    .contact-methods {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .contact-method {
+      text-align: center;
+      flex: 1 1 200px;
+      max-width: 200px;
+      padding: 15px;
+      background-color: var(--background-color);
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-method:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-method img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .contact-method a {
+      display: block;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact-method a:hover {
+      color: var(--secondary-color);
+    }
+
+    .contact-reasons {
+      background-color: var(--background-color);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .contact-reasons h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .contact-reasons ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .contact-reasons li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .contact-reasons li::before {
+      content: '•';
+      color: var(--secondary-color);
+      font-size: 1.5em;
+      position: absolute;
+      left: 5px;
+      top: -5px;
+    }
+
+    .personal-note {
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Pragya Modi</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="contact-container">
+      <section class="contact-header">
+        <h2>Let's Connect!</h2>
+        <p>Got an idea? Want to chat about AI, psychology, or the mysteries of the universe? I'm all ears!</p>
+      </section>
+
+      <section class="contact-methods">
+        <div class="contact-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561188.png" alt="Email icon">
+          <a href="mailto:email@pragyamodi.com">Drop me an email</a>
+        </div>
+        <div class="contact-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn icon">
+          <a href="https://www.linkedin.com/in/pragya-modi-873495137" target="_blank">Connect on LinkedIn</a>
+        </div>
+        <div class="contact-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub icon">
+          <a href="#" target="_blank">Check out my GitHub</a>
+        </div>
+      </section>
+
+      <section class="contact-reasons">
+        <h3>Why reach out? Here are some ideas:</h3>
+        <ul>
+          <li>Brainstorm innovative ideas about AI and mental health</li>
+          <li>Discuss the latest breakthroughs in neural data analysis</li>
+          <li>Share an intriguing paper you've recently read</li>
+          <li>Ask about my journey from psychology to AI</li>
+          <li>Propose a collaboration on an exciting project</li>
+          <li>Invite me for a chat at your event or podcast</li>
+          <li>Just say hello and start an interesting conversation!</li>
+        </ul>
+      </section>
+
+      <p class="personal-note">I'm always up for a good conversation starter. How about sharing your favorite
+        interdisciplinary connection between AI and another field?</p>
+    </div>
+  </main>
+</body>
+
+</html>
