@@ -4,120 +4,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pragya Modi - AI Researcher & Mental Health Innovator</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <title>Pragya Modi - AI Researcher & Mental Health Advocate</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Timeline styles */
-    .timeline {
-      padding: 4rem 0;
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600&display=swap');
+
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #ecf0f1;
+      --accent-color: #3498db;
+      --text-color: #34495e;
+      --background-color: #ffffff;
+      --subtle-accent: #bdc3c7;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.8;
+      color: var(--text-color);
       background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
     }
 
-    .timeline h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--primary-color);
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
-    .timeline-wrapper {
-      position: relative;
-      padding: 2rem 0;
-    }
-
-    .timeline-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 2px;
-      height: 100%;
-      background: var(--secondary-color);
-      transform: translateX(-50%);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2rem;
-      width: 50%;
-    }
-
-    .timeline-item:nth-child(even) {
-      left: 50%;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      top: 0;
-      width: 16px;
-      height: 16px;
-      background: var(--accent-color);
-      border-radius: 50%;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot {
-      right: -8px;
-    }
-
-    .timeline-item:nth-child(even) .timeline-dot {
-      left: -8px;
-    }
-
-    .timeline-content {
-      padding: 1.5rem;
-      background: var(--card-background);
-      border-radius: 5px;
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .timeline-item:nth-child(odd) .timeline-content {
-      margin-right: 2rem;
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .timeline-item:nth-child(even) .timeline-content {
-      margin-left: 2rem;
+    header h1 {
+      color: var(--secondary-color);
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-family: 'Merriweather', serif;
     }
 
-    .timeline-content:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      margin: 0;
     }
 
-    .timeline-content h3 {
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--secondary-color);
+      font-weight: 300;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav ul li a:hover {
       color: var(--accent-color);
-      margin-bottom: 0.5rem;
     }
 
-    .timeline-content h4 {
+    .hero {
+      background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://source.unsplash.com/random/1600x900/?technology,nature');
+      background-size: cover;
+      background-position: center;
+      color: var(--secondary-color);
+      padding: 8rem 0 4rem;
+      text-align: left;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      line-height: 1.2;
+      font-family: 'Merriweather', serif;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #2980b9;
+      transform: translateY(-3px);
+    }
+
+    .about-me,
+    .research-interests,
+    .skills-expertise {
+      padding: 4rem 0;
+    }
+
+    .about-me {
+      background-color: var(--secondary-color);
+    }
+
+    .about-me-content {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .about-me-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-me-image img {
+      max-width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-me-text {
+      flex: 2;
+    }
+
+    .about-me h2,
+    .research-interests h2,
+    .skills-expertise h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 400;
+      font-family: 'Merriweather', serif;
+    }
+
+    .interests-list,
+    .skills-list {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .interests-list li,
+    .skills-list li {
+      background-color: var(--secondary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: var(--primary-color);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .interest-title,
+    .skill-category {
+      font-size: 1.2rem;
       color: var(--primary-color);
       margin-bottom: 0.5rem;
+      font-family: 'Merriweather', serif;
     }
 
-    .timeline-content p {
-      margin-bottom: 0;
+    .interest-description,
+    .skill-description {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color);
     }
 
     @media (max-width: 768px) {
-      .timeline-wrapper::before {
-        left: 0;
+      .about-me-content {
+        flex-direction: column;
       }
 
-      .timeline-item {
-        width: 100%;
-        left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        left: 0;
-      }
-
-      .timeline-dot {
-        left: -8px;
-      }
-
-      .timeline-content {
-        margin-left: 2rem !important;
+      .hero h2 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -129,9 +239,8 @@
       <h1>Pragya Modi</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="cv.html">CV</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -141,158 +250,89 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h2>Bridging AI and Mental Health</h2>
-        <p>MSc Artificial Intelligence student at the University of Edinburgh, dedicated to pioneering innovative
-          solutions at the intersection of technology and mental wellbeing.</p>
-        <a href="#interests" class="cta-button">Explore My Interests</a>
+        <div class="hero-content">
+          <h2>Bridging Technology and Mental Health</h2>
+          <p>Masters student in AI, aspiring researcher, and mental health advocate exploring the potential of
+            technology to transform mental health care and support.</p>
+          <a href="#about" class="cta-button">Learn About My Journey</a>
+        </div>
       </div>
     </section>
 
-    <section class="overview">
+    <section id="about" class="about-me">
       <div class="container">
-        <h2>At a Glance</h2>
-        <div class="overview-grid">
-          <div class="overview-item">
-            <i class="fas fa-brain"></i>
-            <h3>AI Researcher</h3>
-            <p>Focused on machine learning and neural networks for healthcare applications</p>
+        <div class="about-me-content">
+          <div class="about-me-image">
+            <img src="assets/picture.JPG" alt="Pragya Modi">
           </div>
-          <div class="overview-item">
-            <i class="fas fa-heart"></i>
-            <h3>Mental Health Advocate</h3>
-            <p>Passionate about leveraging technology to improve mental health care and accessibility</p>
-          </div>
-          <div class="overview-item">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Software Developer</h3>
-            <p>Experienced in creating innovative software solutions for real-world problems</p>
-          </div>
-          <div class="overview-item">
-            <i class="fas fa-users"></i>
-            <h3>Interdisciplinary Collaborator</h3>
-            <p>Bridging the gap between computer science, psychology, and healthcare</p>
+          <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>As a masters student in Artificial Intelligence, my journey is deeply personal. My experiences with
+              mental health challenges, both personally and within my family, have fueled my passion for leveraging
+              technology to improve mental health care and support systems.</p>
+            <p>Despite facing academic setbacks due to these struggles, I've found strength and purpose in my studies.
+              I'm driven by the potential of AI to create more accessible, personalized, and effective mental health
+              interventions.</p>
+            <p>When I'm not immersed in research or coding, I find solace in nature and solo travel. These experiences
+              not only help me manage my own mental health but also inspire innovative approaches to my work in AI and
+              psychology.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="timeline">
-      <div class="container">
-        <h2>My Journey</h2>
-        <div class="timeline-wrapper">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>2023 - Present</h3>
-              <h4>MSc Artificial Intelligence</h4>
-              <p>University of Edinburgh</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>2023 - Present</h3>
-              <h4>Digital Skills Trainer</h4>
-              <p>University of Edinburgh</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>2020 - 2023</h3>
-              <h4>BSc Psychology</h4>
-              <p>Arden University</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>2019 - 2022</h3>
-              <h4>BSc Computer Science</h4>
-              <p>University of London</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="interests" class="interests">
+    <section class="research-interests">
       <div class="container">
         <h2>Research Interests</h2>
-        <div class="interests-grid">
-          <div class="interest-item">
-            <h3>AI in Mental Health Care</h3>
-            <p>Exploring how artificial intelligence can revolutionize mental health diagnosis, treatment, and support
-              systems.</p>
-          </div>
-          <div class="interest-item">
-            <h3>Neural Data Analysis</h3>
-            <p>Developing advanced algorithms for analyzing and interpreting complex neural data to gain insights into
-              brain function and disorders.</p>
-          </div>
-          <div class="interest-item">
-            <h3>Ethical AI in Healthcare</h3>
-            <p>Investigating the ethical implications of AI integration in healthcare and developing frameworks for
-              responsible implementation.</p>
-          </div>
-          <div class="interest-item">
-            <h3>Cognitive Computing</h3>
-            <p>Researching cognitive architectures and models to create more human-like artificial intelligence systems.
-            </p>
-          </div>
-          <div class="interest-item">
-            <h3>Neurodegenerative Disease Prediction</h3>
-            <p>Applying machine learning techniques for early detection and progression modeling of neurodegenerative
-              diseases like Alzheimer's.</p>
-          </div>
-          <div class="interest-item">
-            <h3>Human-AI Interaction</h3>
-            <p>Studying the psychological aspects of human-AI interaction to design more effective and empathetic AI
-              systems for mental health support.</p>
-          </div>
-        </div>
+        <ul class="interests-list">
+          <li>AI-Driven Mental Health Interventions</li>
+          <li>Natural Language Processing in Psychology</li>
+          <li>Ethical AI in Healthcare</li>
+          <li>Machine Learning for Behavioral Analysis</li>
+          <li>Virtual Reality in Therapy</li>
+          <li>Predictive Modeling for Mental Health</li>
+        </ul>
       </div>
     </section>
 
-    <section class="featured-work">
+    <section class="skills-expertise">
       <div class="container">
-        <h2>Featured Work</h2>
-        <div class="work-slider">
-          <div class="work-item">
-            <h3>Deep Learning for Alzheimer's Prediction</h3>
-            <p>Developed a multi-input deep learning graph model achieving 95.51% accuracy in Alzheimer's
-              classification.</p>
-            <a href="#" class="learn-more">Learn More</a>
-          </div>
-          <div class="work-item">
-            <h3>Gaming and Mental Health</h3>
-            <p>Conducted qualitative research on the impact of gaming on adolescents, providing insights into
-              parent-child relationships and gaming effects.</p>
-            <a href="#" class="learn-more">Learn More</a>
-          </div>
-          <div class="work-item">
-            <h3>Self-Care Application</h3>
-            <p>Created 'Explore', a personalized self-care application using AI-driven recommendations to promote mental
-              wellbeing.</p>
-            <a href="#" class="learn-more">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="call-to-action">
-      <div class="container">
-        <h2>Let's Innovate Together</h2>
-        <p>Interested in collaborating on projects at the intersection of AI and mental health? I'm always open to new
-          ideas and partnerships.</p>
-        <a href="contact.html" class="cta-button">Get in Touch</a>
+        <h2>Skills & Expertise</h2>
+        <div class="skill-category">Programming Languages</div>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>R</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+        <div class="skill-category">Machine Learning & AI</div>
+        <ul class="skills-list">
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>Scikit-learn</li>
+          <li>Natural Language Processing</li>
+        </ul>
+        <div class="skill-category">Data Analysis & Visualization</div>
+        <ul class="skills-list">
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>Matplotlib</li>
+          <li>Tableau</li>
+        </ul>
+        <div class="skill-category">Research Methods</div>
+        <ul class="skills-list">
+          <li>Experimental Design</li>
+          <li>Statistical Analysis</li>
+          <li>Qualitative Research</li>
+          <li>Literature Review</li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2024 Pragya Modi | Transforming mental health through AI, one algorithm at a time.</p>
+      <p>© 2024 Pragya Modi | Aspiring to transform mental health care through innovative AI research</p>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/pragya-modi-873495137/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/pragyamodi" target="_blank"><i class="fab fa-github"></i></a>
