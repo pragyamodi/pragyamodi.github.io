@@ -222,6 +222,69 @@
             color: var(--accent-color);
         }
 
+        .research-interests {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .research-interests h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .research-interests ul {
+            columns: 2;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .research-interests li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .research-interests li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .key-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .publications-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .publications-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .publications-list li::before {
+            content: '📄';
+            position: absolute;
+            left: 0;
+        }
+
         @media (max-width: 768px) {
             .timeline {
                 padding-left: 1rem;
@@ -260,7 +323,41 @@
             </div>
         </section>
 
+
         <div class="container">
+            <section id="research-interests" class="cv-section">
+                <h2><i class="fas fa-microscope"></i> Research Interests</h2>
+                <div class="research-interests">
+                    <ul>
+                        <li>AI in Mental Health</li>
+                        <li>Computational Neuroscience</li>
+                        <li>Machine Learning for Healthcare</li>
+                        <li>Natural Language Processing in Psychology</li>
+                        <li>Ethical AI in Medical Applications</li>
+                        <li>Cognitive Psychology and AI</li>
+                        <li>Human-Computer Interaction in Healthcare</li>
+                        <li>Bioinformatics and Genomics</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="key-skills" class="cv-section">
+                <h2><i class="fas fa-star"></i> Key Academic Skills</h2>
+                <div class="key-skills">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Neural Networks</span>
+                    <span class="skill-tag">Statistical Analysis</span>
+                    <span class="skill-tag">Research Design</span>
+                    <span class="skill-tag">Scientific Writing</span>
+                    <span class="skill-tag">Python Programming</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">SPSS</span>
+                    <span class="skill-tag">Qualitative Research</span>
+                    <span class="skill-tag">Experimental Design</span>
+                    <span class="skill-tag">Literature Review</span>
+                </div>
+            </section>
             <section id="education" class="cv-section">
                 <h2><i class="fas fa-graduation-cap"></i> Education</h2>
                 <div class="timeline">
@@ -268,7 +365,8 @@
                         <h3>MSc Artificial Intelligence</h3>
                         <p>University of Edinburgh (2023 - Present)</p>
                         <p>Key Courses: Informatics Research Review, Formal Verification, Bioinformatics, Quantum
-                            Computing, Computational Neuroscience, Types and Semantics of Programming Language, Image
+                            Computing, Computational Neuroscience, Types and Semantics of Programming Language,
+                            Image
                             and Vision Computing, Attachment Wellbeing and Mental Health</p>
                     </div>
                     <div class="timeline-item">
@@ -278,14 +376,16 @@
                         <p>Thesis: Deep learning Model to predict Alzheimer's Disease</p>
                         <p>Key Courses: Artificial Intelligence, Machine Learning and Neural Networks, Intelligent
                             Signal Processing, Graphics Programming, Agile Software Project, Algorithms and Data
-                            Structures, Computational Mathematics, Computer Security, Databases, Networks and the Web
+                            Structures, Computational Mathematics, Computer Security, Databases, Networks and the
+                            Web
                         </p>
                     </div>
                     <div class="timeline-item">
                         <h3>BSc (Hons) Psychology (BPS Accredited)</h3>
                         <p>Arden University (2020 - 2023)</p>
                         <p>First Class Honours</p>
-                        <p>Thesis: Females in Gaming: Threats or Mythical Creatures. The Male gamer's perspective.</p>
+                        <p>Thesis: Females in Gaming: Threats or Mythical Creatures. The Male gamer's perspective.
+                        </p>
                         <p>Key Courses: Brain and Behavior, Advanced Topics in Cognitive Psychology, Contemporary
                             Developmental Psychology, Mental Health and Illness, Qualitative Research Methods,
                             Quantitative Research Methods, Cross-Cultural Psychology, Occupational Psychology,
@@ -301,11 +401,14 @@
                         <h3>Digital Skills Trainer (AI and Data)</h3>
                         <p>University of Edinburgh (December 2023 - Present)</p>
                         <ul>
-                            <li>Developed SPSS, Data Analysis, and AI courses with innovative content and methodologies
+                            <li>Developed SPSS, Data Analysis, and AI courses with innovative content and
+                                methodologies
                             </li>
-                            <li>Enhanced engagement in webinars and in-person sessions through interactive strategies
+                            <li>Enhanced engagement in webinars and in-person sessions through interactive
+                                strategies
                             </li>
-                            <li>Delivered tailored educational programs to University of Edinburgh students and staff
+                            <li>Delivered tailored educational programs to University of Edinburgh students and
+                                staff
                             </li>
                             <li>Produced comprehensive learning materials for continuous attendee development</li>
                             <li>Pitched and conceptualised unique course ideas reflecting personal interests</li>
@@ -317,8 +420,10 @@
                         <ul>
                             <li>Crafted engaging social media content for various platforms</li>
                             <li>Authored and edited compelling captions for social media posts and blog entries</li>
-                            <li>Conducted thorough research to identify and assess diverse content opportunities</li>
-                            <li>Strategically organized content around weekly themes, maintaining brand consistency</li>
+                            <li>Conducted thorough research to identify and assess diverse content opportunities
+                            </li>
+                            <li>Strategically organized content around weekly themes, maintaining brand consistency
+                            </li>
                         </ul>
                     </div>
                     <div class="timeline-item">
@@ -357,7 +462,8 @@
                             <li>Engaged in data analysis and report writing</li>
                             <li>Led data collection efforts for replication studies</li>
                             <li>Conducted research on topics such as 'fear of failure' and 'motivation'</li>
-                            <li>Collaborated with teams to maintain data integrity and support research objectives</li>
+                            <li>Collaborated with teams to maintain data integrity and support research objectives
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -470,8 +576,10 @@
                         <p>Arden University (February 2023 - July 2023)</p>
                         <ul>
                             <li>Spearheaded the FoSS Social project, fostering community engagement</li>
-                            <li>Collaborated with faculty stakeholders to promote the project and train volunteers</li>
-                            <li>Supervised student volunteers, guiding in event planning, tech issues, and scheduling
+                            <li>Collaborated with faculty stakeholders to promote the project and train volunteers
+                            </li>
+                            <li>Supervised student volunteers, guiding in event planning, tech issues, and
+                                scheduling
                             </li>
                             <li>Organized a large-scale launch event, "FoSS Social Fresher's Friday"</li>
                         </ul>
@@ -480,7 +588,8 @@
                         <h3>BSc Psychology Student Representative</h3>
                         <p>Arden University (December 2022 - July 2023)</p>
                         <ul>
-                            <li>Championed student interests and issues, working with faculty and administration</li>
+                            <li>Championed student interests and issues, working with faculty and administration
+                            </li>
                             <li>Participated in the staff-student liaison committee</li>
                             <li>Initiated 'Study With Us' sessions for distance learning students</li>
                             <li>Hosted interactive Zoom drop-in sessions for student feedback</li>
@@ -500,7 +609,8 @@
                         <h3>Lecturing Assistant</h3>
                         <p>Arden University (October 2021 - March 2022)</p>
                         <ul>
-                            <li>Assisted in Qualitative Research Methods and Biological and Cognitive Psychology courses
+                            <li>Assisted in Qualitative Research Methods and Biological and Cognitive Psychology
+                                courses
                             </li>
                             <li>Motivated academic excellence and aided new students' transition into learning
                                 environments</li>
@@ -532,11 +642,6 @@
                     <li>Computer Science (Oxford Summer School, 2018)</li>
                 </ul>
             </section>
-        </div>
-
-        <div class="container">
-            <!-- [Previous sections remain unchanged] -->
-
             <section id="conferences-talks" class="cv-section">
                 <h2><i class="fas fa-microphone-alt"></i> Conferences and Talks</h2>
                 <div class="timeline">
@@ -580,23 +685,20 @@
             </section>
         </div>
 
-</body>
-
-</html>
-</main>
+    </main>
 
 
-<footer>
-    <div class="container">
-        <p>© 2024 Pragya Modi | Transforming mental health through AI, one algorithm at a time.</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/pragya-modi-873495137/" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/pragyamodi" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/pragyamodi9" target="_blank"><i class="fab fa-twitter"></i></a>
+    <footer>
+        <div class="container">
+            <p>© 2024 Pragya Modi | Transforming mental health through AI, one algorithm at a time.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/pragya-modi-873495137/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/pragyamodi" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/pragyamodi9" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>
