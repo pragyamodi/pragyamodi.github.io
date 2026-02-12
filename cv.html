@@ -594,6 +594,12 @@
                 const links = Array.from(
                     quickNav.querySelectorAll('a[href^="#"]'),
                 );
+                const navGroups = Array.from(
+                    quickNav.querySelectorAll(".cv-nav-group"),
+                );
+                const groupLinks = Array.from(
+                    quickNav.querySelectorAll(".cv-nav-group > a"),
+                );
                 const sections = Array.from(
                     new Set(
                         links
@@ -643,14 +649,44 @@
 
                 sections.forEach((section) => observer.observe(section));
 
+                groupLinks.forEach((groupLink) => {
+                    const group = groupLink.parentElement;
+                    const subMenu = group?.querySelector(".cv-sub-links");
+                    if (!group || !subMenu) return;
+
+                    groupLink.addEventListener("click", (event) => {
+                        if (!window.matchMedia("(hover: none)").matches) return;
+
+                        const isOpen = group.classList.contains("is-open");
+                        if (!isOpen) {
+                            event.preventDefault();
+                            navGroups.forEach((item) =>
+                                item.classList.remove("is-open"),
+                            );
+                            group.classList.add("is-open");
+                        }
+                    });
+                });
+
                 links.forEach((link) => {
                     link.addEventListener("click", () => {
                         setActiveLink(link.hash.slice(1));
+                        navGroups.forEach((group) =>
+                            group.classList.remove("is-open"),
+                        );
                     });
                 });
 
                 window.addEventListener("hashchange", () => {
                     setActiveLink(getSectionId());
+                });
+
+                document.addEventListener("click", (event) => {
+                    if (!quickNav.contains(event.target)) {
+                        navGroups.forEach((group) =>
+                            group.classList.remove("is-open"),
+                        );
+                    }
                 });
             })();
         </script>

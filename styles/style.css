@@ -367,6 +367,7 @@ nav a:hover {
 }
 
 .cv-nav-group:hover .cv-sub-links,
+.cv-nav-group.is-open .cv-sub-links,
 .cv-nav-group:focus-within .cv-sub-links {
     display: block;
 }
@@ -633,23 +634,7 @@ nav a:focus-visible,
 
     .cv-quick-links {
         flex-basis: 100%;
-        flex-direction: column;
-        gap: 0.5rem;
-        white-space: normal;
-    }
-
-    .cv-sub-links {
-        display: block;
-        position: static;
-        min-width: 0;
-        border: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 0.25rem 0 0 0.6rem;
-    }
-
-    .cv-sub-links a {
-        padding: 0.25rem 0.4rem;
+        overflow-x: auto;
     }
 
     .cv-section {
