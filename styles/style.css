@@ -637,6 +637,22 @@ nav a:focus-visible,
         overflow-x: auto;
     }
 
+    .cv-sub-links {
+        display: none;
+        position: absolute;
+        min-width: 210px;
+        border: 1px solid #bfd0e6;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+        background: #ffffff;
+        padding: 0.45rem;
+    }
+
+    .cv-nav-group:hover .cv-sub-links,
+    .cv-nav-group:focus-within .cv-sub-links,
+    .cv-nav-group.is-open .cv-sub-links {
+        display: block;
+    }
+
     .cv-section {
         scroll-margin-top: 170px;
     }
