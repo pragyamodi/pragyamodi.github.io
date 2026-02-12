@@ -1,369 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pragya Modi - AI Researcher & Mental Health Advocate</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pragya Modi - AI Researcher & Mental Health Advocate</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600&display=swap');
+    <body class="page-home">
+        <header>
+            <div class="container">
+                <h1><a href="index.html#about">Pragya Modi</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #ecf0f1;
-      --accent-color: #3498db;
-      --text-color: #34495e;
-      --background-color: #ffffff;
-      --subtle-accent: #bdc3c7;
-    }
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>
+                            Innovating at the Intersection of AI and Healthcare
+                        </h2>
+                        <p>
+                            AI researcher and aspiring health tech innovator,
+                            exploring the potential of technology to transform
+                            healthcare, with a particular focus on mental
+                            health.
+                        </p>
+                        <a href="#about" class="cta-button"
+                            >Discover My Journey</a
+                        >
+                    </div>
+                </div>
+            </section>
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.8;
-      color: var(--text-color);
-      background-color: var(--background-color);
-      margin: 0;
-      padding: 0;
-    }
+            <section id="about" class="about-me">
+                <div class="container">
+                    <div class="about-me-content">
+                        <div class="about-me-image">
+                            <img
+                                src="picture.jpg"
+                                alt="Portrait of Pragya Modi"
+                            />
+                        </div>
+                        <div class="about-me-text">
+                            <h2>Hello, I'm Pragya</h2>
+                            <p>
+                                As a masters student in Artificial Intelligence,
+                                my journey is driven by a passion for leveraging
+                                technology to improve healthcare. While my
+                                primary focus is on mental health, I'm deeply
+                                interested in the broader applications of AI
+                                across various health domains, including biotech
+                                and personalized medicine.
+                            </p>
+                            <p>
+                                My interdisciplinary background in Computer
+                                Science and Psychology has given me a unique
+                                perspective on the challenges and opportunities
+                                in health tech. I'm constantly exploring
+                                innovative ways to bridge the gap between
+                                cutting-edge AI research and practical
+                                healthcare solutions.
+                            </p>
+                            <p>
+                                When I'm not immersed in research or coding, I
+                                find inspiration in nature and solo travel.
+                                These experiences not only help me maintain my
+                                own well-being but also fuel creative approaches
+                                to my work in AI and health technology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+            <section id="interests" class="interests">
+                <div class="container">
+                    <h2>Research Interests</h2>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI in Mental Health</h3>
+                            <p>
+                                Exploring how AI can enhance our understanding
+                                of mental health and foster more accessible and
+                                effective interventions.
+                            </p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Computational Neuroscience</h3>
+                            <p>
+                                Applying computational models to understand
+                                neural processes and brain function, bridging
+                                neurobiology and artificial intelligence.
+                            </p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-dna"></i>
+                            <h3>Biotech Innovations</h3>
+                            <p>
+                                Investigating the potential of AI in genomics,
+                                drug discovery, and personalized medicine to
+                                revolutionize healthcare.
+                            </p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Health Monitoring</h3>
+                            <p>
+                                Developing AI-driven systems for early disease
+                                detection and continuous health monitoring to
+                                improve preventive care.
+                            </p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-robot"></i>
+                            <h3>Ethical AI in Healthcare</h3>
+                            <p>
+                                Addressing the ethical implications of AI
+                                integration in healthcare to ensure responsible
+                                and equitable implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    header {
-      background-color: var(--primary-color);
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+            <section class="skills-expertise">
+                <div class="container">
+                    <h2>Skills & Expertise</h2>
+                    <div class="skill-category">Programming Languages</div>
+                    <ul class="skills-list">
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
+                    <div class="skill-category">Machine Learning & AI</div>
+                    <ul class="skills-list">
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-learn</li>
+                        <li>Natural Language Processing</li>
+                    </ul>
+                    <div class="skill-category">
+                        Data Analysis & Visualization
+                    </div>
+                    <ul class="skills-list">
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Matplotlib</li>
+                        <li>Tableau</li>
+                    </ul>
+                    <div class="skill-category">Research Methods</div>
+                    <ul class="skills-list">
+                        <li>Experimental Design</li>
+                        <li>Statistical Analysis</li>
+                        <li>Qualitative Research</li>
+                        <li>Literature Review</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      color: var(--secondary-color);
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 400;
-      font-family: 'Merriweather', serif;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin-left: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: var(--secondary-color);
-      font-weight: 300;
-      transition: color 0.3s ease;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    nav ul li a:hover {
-      color: var(--accent-color);
-    }
-
-    .hero {
-      background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://source.unsplash.com/random/1600x900/?technology,nature');
-      background-size: cover;
-      background-position: center;
-      color: var(--secondary-color);
-      padding: 8rem 0 4rem;
-      text-align: left;
-    }
-
-    .hero-content {
-      max-width: 800px;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 400;
-      line-height: 1.2;
-      font-family: 'Merriweather', serif;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      font-weight: 300;
-      opacity: 0.9;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background-color: var(--accent-color);
-      color: var(--secondary-color);
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      font-weight: 400;
-      font-size: 1rem;
-    }
-
-    .cta-button:hover {
-      background-color: #2980b9;
-      transform: translateY(-3px);
-    }
-
-    .about-me,
-    .research-interests,
-    .skills-expertise {
-      padding: 4rem 0;
-    }
-
-    .about-me {
-      background-color: var(--secondary-color);
-    }
-
-    .about-me-content {
-      display: flex;
-      align-items: center;
-      gap: 4rem;
-    }
-
-    .about-me-image {
-      flex: 1;
-      text-align: center;
-    }
-
-    .about-me-image img {
-      max-width: 100%;
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .about-me-text {
-      flex: 2;
-    }
-
-    .about-me h2,
-    .research-interests h2,
-    .skills-expertise h2 {
-      color: var(--primary-color);
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      font-weight: 400;
-      font-family: 'Merriweather', serif;
-    }
-
-    .interests-list,
-    .skills-list {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .interests-list li,
-    .skills-list li {
-      background-color: var(--secondary-color);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      color: var(--primary-color);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .interest-title,
-    .skill-category {
-      font-size: 1.2rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-      font-family: 'Merriweather', serif;
-    }
-
-    .interest-description,
-    .skill-description {
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    .social-links {
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      color: var(--secondary-color);
-      font-size: 1.5rem;
-      margin: 0 0.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: var(--accent-color);
-    }
-
-    @media (max-width: 768px) {
-      .about-me-content {
-        flex-direction: column;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <h1>Pragya Modi</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h2>Innovating at the Intersection of AI and Healthcare</h2>
-          <p>AI researcher and aspiring health tech innovator, exploring the potential of technology to transform
-            healthcare, with a particular focus on mental health.</p>
-          <a href="#about" class="cta-button">Discover My Journey</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about-me">
-      <div class="container">
-        <div class="about-me-content">
-          <div class="about-me-image">
-            <img src="picture.jpg" alt="Pragya Modi">
-          </div>
-          <div class="about-me-text">
-            <h2>Hello, I'm Pragya</h2>
-            <p>As a masters student in Artificial Intelligence, my journey is driven by a passion for leveraging
-              technology to improve healthcare. While my primary focus is on mental health, I'm deeply interested in the
-              broader applications of AI across various health domains, including biotech and personalized medicine.</p>
-            <p>My interdisciplinary background in Computer Science and Psychology has given me a unique perspective on
-              the challenges and opportunities in health tech. I'm constantly exploring innovative ways to bridge the
-              gap between cutting-edge AI research and practical healthcare solutions.</p>
-            <p>When I'm not immersed in research or coding, I find inspiration in nature and solo travel. These
-              experiences not only help me maintain my own well-being but also fuel creative approaches to my work in AI
-              and health technology.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="interests" class="interests">
-      <div class="container">
-        <h2>Research Interests</h2>
-        <div class="interests-grid">
-          <div class="interest-item">
-            <i class="fas fa-brain"></i>
-            <h3>AI in Mental Health</h3>
-            <p>Exploring how AI can enhance our understanding of mental health and foster more accessible and effective
-              interventions.</p>
-          </div>
-          <div class="interest-item">
-            <i class="fas fa-network-wired"></i>
-            <h3>Computational Neuroscience</h3>
-            <p>Applying computational models to understand neural processes and brain function, bridging neurobiology
-              and artificial intelligence.</p>
-          </div>
-          <div class="interest-item">
-            <i class="fas fa-dna"></i>
-            <h3>Biotech Innovations</h3>
-            <p>Investigating the potential of AI in genomics, drug discovery, and personalized medicine to revolutionize
-              healthcare.</p>
-          </div>
-          <div class="interest-item">
-            <i class="fas fa-heartbeat"></i>
-            <h3>Health Monitoring</h3>
-            <p>Developing AI-driven systems for early disease detection and continuous health monitoring to improve
-              preventive care.</p>
-          </div>
-          <div class="interest-item">
-            <i class="fas fa-robot"></i>
-            <h3>Ethical AI in Healthcare</h3>
-            <p>Addressing the ethical implications of AI integration in healthcare to ensure responsible and equitable
-              implementation.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills-expertise">
-      <div class="container">
-        <h2>Skills & Expertise</h2>
-        <div class="skill-category">Programming Languages</div>
-        <ul class="skills-list">
-          <li>Python</li>
-          <li>R</li>
-          <li>Java</li>
-          <li>SQL</li>
-        </ul>
-        <div class="skill-category">Machine Learning & AI</div>
-        <ul class="skills-list">
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>Scikit-learn</li>
-          <li>Natural Language Processing</li>
-        </ul>
-        <div class="skill-category">Data Analysis & Visualization</div>
-        <ul class="skills-list">
-          <li>Pandas</li>
-          <li>NumPy</li>
-          <li>Matplotlib</li>
-          <li>Tableau</li>
-        </ul>
-        <div class="skill-category">Research Methods</div>
-        <ul class="skills-list">
-          <li>Experimental Design</li>
-          <li>Statistical Analysis</li>
-          <li>Qualitative Research</li>
-          <li>Literature Review</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2024 Pragya Modi | Innovating at the intersection of AI and healthcare to create a healthier future</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/pragya-modi-873495137/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/pragyamodi" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/pragyamodi9" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+        <footer>
+            <div class="container">
+                <p>
+                    © 2024 Pragya Modi | Innovating at the intersection of AI
+                    and healthcare to create a healthier future
+                </p>
+                <div class="social-links">
+                    <a
+                        href="https://www.linkedin.com/in/pragya-modi-873495137/"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <a
+                        href="https://github.com/pragyamodi"
+                        aria-label="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                        href="https://twitter.com/pragyamodi9"
+                        aria-label="Twitter"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

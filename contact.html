@@ -1,274 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pragya Modi - Contact</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pragya Modi - Contact</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600&display=swap');
-
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #ecf0f1;
-      --accent-color: #3498db;
-      --text-color: #34495e;
-      --background-color: #ffffff;
-      --subtle-accent: #bdc3c7;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.8;
-      color: var(--text-color);
-      background-color: var(--background-color);
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header {
-      background-color: var(--primary-color);
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      color: var(--secondary-color);
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 400;
-      font-family: 'Merriweather', serif;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin-left: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: var(--secondary-color);
-      font-weight: 300;
-      transition: color 0.3s ease;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    nav ul li a:hover {
-      color: var(--accent-color);
-    }
-
-    .hero {
-      background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://source.unsplash.com/random/1600x900/?technology,communication');
-      background-size: cover;
-      background-position: center;
-      color: var(--secondary-color);
-      padding: 8rem 0 4rem;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 400;
-      font-family: 'Merriweather', serif;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-content {
-      padding: 4rem 0;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .contact-section {
-      background-color: var(--secondary-color);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact-section h3 {
-      color: var(--primary-color);
-      font-family: 'Merriweather', serif;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-    }
-
-    .contact-method {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .contact-method i {
-      color: var(--accent-color);
-      font-size: 1.2rem;
-      margin-right: 1rem;
-      width: 20px;
-    }
-
-    .contact-method a {
-      color: var(--text-color);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .contact-method a:hover {
-      color: var(--accent-color);
-    }
-
-    .contact-reasons ul {
-      padding-left: 1.5rem;
-    }
-
-    .contact-reasons li {
-      margin-bottom: 0.75rem;
-    }
-
-    .personal-note {
-      grid-column: 1 / -1;
-      text-align: center;
-      margin-top: 2rem;
-      font-style: italic;
-      color: var(--text-color);
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    .social-links {
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      color: var(--secondary-color);
-      font-size: 1.5rem;
-      margin: 0 0.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: var(--accent-color);
-    }
-
-    @media (max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <h1>Pragya Modi</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Let's Connect</h2>
-        <p>Explore ideas at the intersection of AI, Psychology, and Mental Health</p>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="contact-content">
-        <div class="contact-grid">
-          <section class="contact-section">
-            <h3>Get in Touch</h3>
-            <div class="contact-method">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:email@pragyamodi.com">email@pragyamodi.com</a>
+    <body class="page-contact">
+        <header>
+            <div class="container">
+                <h1><a href="index.html#about">Pragya Modi</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="contact-method">
-              <i class="fab fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/pragya-modi-873495137" target="_blank">LinkedIn Profile</a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <h2>Let's Connect</h2>
+                    <p>
+                        Explore ideas at the intersection of AI, Psychology, and
+                        Mental Health
+                    </p>
+                </div>
+            </section>
+
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-grid">
+                        <section class="contact-section">
+                            <h3>Get in Touch</h3>
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:email@pragyamodi.com"
+                                    >email@pragyamodi.com</a
+                                >
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <a
+                                    href="https://www.linkedin.com/in/pragya-modi-873495137"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >LinkedIn Profile</a
+                                >
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <a
+                                    href="https://github.com/pragyamodi"
+                                    aria-label="GitHub"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >GitHub Profile</a
+                                >
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-twitter"></i>
+                                <a
+                                    href="https://twitter.com/pragyamodi9"
+                                    aria-label="Twitter"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Twitter Profile</a
+                                >
+                            </div>
+                        </section>
+
+                        <section class="contact-section contact-reasons">
+                            <h3>Why Reach Out?</h3>
+                            <ul>
+                                <li>
+                                    Discuss innovative ideas in AI and mental
+                                    health
+                                </li>
+                                <li>
+                                    Explore potential collaborations on research
+                                    projects
+                                </li>
+                                <li>
+                                    Share insights on recent developments in
+                                    psychology or AI
+                                </li>
+                                <li>
+                                    Inquire about my academic journey and
+                                    experiences
+                                </li>
+                                <li>
+                                    Seek advice on bridging technology and
+                                    mental health fields
+                                </li>
+                            </ul>
+                        </section>
+
+                        <p class="personal-note">
+                            I'm always eager to engage in thought-provoking
+                            discussions. What's your perspective on the future
+                            of AI in mental health care?
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="contact-method">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/pragyamodi" target="_blank">GitHub Profile</a>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>
+                    © 2024 Pragya Modi | Bridging AI and mental health for
+                    innovative solutions
+                </p>
+                <div class="social-links">
+                    <a
+                        href="https://www.linkedin.com/in/pragya-modi-873495137/"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <a
+                        href="https://github.com/pragyamodi"
+                        aria-label="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                        href="https://twitter.com/pragyamodi9"
+                        aria-label="Twitter"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                </div>
             </div>
-            <div class="contact-method">
-              <i class="fab fa-twitter"></i>
-              <a href="https://twitter.com/pragyamodi9" target="_blank">Twitter Profile</a>
-            </div>
-          </section>
-
-          <section class="contact-section contact-reasons">
-            <h3>Why Reach Out?</h3>
-            <ul>
-              <li>Discuss innovative ideas in AI and mental health</li>
-              <li>Explore potential collaborations on research projects</li>
-              <li>Share insights on recent developments in psychology or AI</li>
-              <li>Inquire about my academic journey and experiences</li>
-              <li>Seek advice on bridging technology and mental health fields</li>
-            </ul>
-          </section>
-
-          <p class="personal-note">I'm always eager to engage in thought-provoking discussions. What's your perspective
-            on the future of AI in mental health care?</p>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2024 Pragya Modi | Bridging AI and mental health for innovative solutions</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/pragya-modi-873495137/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/pragyamodi" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/pragyamodi9" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+        </footer>
+    </body>
 </html>
