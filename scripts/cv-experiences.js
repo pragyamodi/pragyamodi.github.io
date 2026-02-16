@@ -1,4 +1,26 @@
 (function () {
+  function candidatePaths(path) {
+    const value = String(path || "").trim();
+    if (!value) return [];
+    if (value.startsWith("/")) return [value];
+    return [value, `/${value}`];
+  }
+
+  async function fetchWithFallback(path) {
+    const candidates = candidatePaths(path);
+    let lastStatus = "";
+
+    for (const candidate of candidates) {
+      const response = await fetch(candidate);
+      if (response.ok) return response;
+      lastStatus = `${candidate} (${response.status})`;
+    }
+
+    throw new Error(
+      `Failed to load ${path}${lastStatus ? `: ${lastStatus}` : ""}`,
+    );
+  }
+
   const monthNames = [
     "January",
     "February",
@@ -248,10 +270,7 @@
   }
 
   async function fetchExperience(path) {
-    const response = await fetch(path);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${path}: ${response.status}`);
-    }
+    const response = await fetchWithFallback(path);
     const markdown = await response.text();
     return parseFrontMatter(markdown);
   }
@@ -276,10 +295,7 @@
       return;
     }
 
-    const response = await fetch(jsonPath);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${jsonPath}: ${response.status}`);
-    }
+    const response = await fetchWithFallback(jsonPath);
 
     const entries = await response.json();
     const safeEntries = Array.isArray(entries) ? entries : [];
@@ -296,10 +312,7 @@
       return;
     }
 
-    const response = await fetch(jsonPath);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${jsonPath}: ${response.status}`);
-    }
+    const response = await fetchWithFallback(jsonPath);
 
     const educationItems = await response.json();
     const safeItems = Array.isArray(educationItems) ? educationItems : [];
@@ -318,10 +331,7 @@
       return;
     }
 
-    const response = await fetch(jsonPath);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${jsonPath}: ${response.status}`);
-    }
+    const response = await fetchWithFallback(jsonPath);
 
     const talks = await response.json();
     const safeTalks = Array.isArray(talks) ? talks : [];
@@ -333,10 +343,7 @@
 
   async function initExperiences() {
     try {
-      const response = await fetch("data/site.json");
-      if (!response.ok) {
-        throw new Error(`Failed to load manifest: ${response.status}`);
-      }
+      const response = await fetchWithFallback("data/site.json");
 
       const manifest = await response.json();
       const workFiles =

@@ -1,4 +1,26 @@
 (function () {
+  function candidatePaths(path) {
+    const value = String(path || "").trim();
+    if (!value) return [];
+    if (value.startsWith("/")) return [value];
+    return [value, `/${value}`];
+  }
+
+  async function fetchWithFallback(path) {
+    const candidates = candidatePaths(path);
+    let lastStatus = "";
+
+    for (const candidate of candidates) {
+      const response = await fetch(candidate);
+      if (response.ok) return response;
+      lastStatus = `${candidate} (${response.status})`;
+    }
+
+    throw new Error(
+      `Failed to load ${path}${lastStatus ? `: ${lastStatus}` : ""}`,
+    );
+  }
+
   function stripQuotes(value) {
     const trimmed = value.trim();
     if (
@@ -82,10 +104,7 @@
   }
 
   async function fetchMarkdown(path) {
-    const response = await fetch(path);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${path}: ${response.status}`);
-    }
+    const response = await fetchWithFallback(path);
     const markdown = await response.text();
     return parseFrontMatter(markdown);
   }
@@ -96,12 +115,7 @@
     if (!list) return;
 
     try {
-      const manifestResponse = await fetch("data/site.json");
-      if (!manifestResponse.ok) {
-        throw new Error(
-          `Failed to load site manifest: ${manifestResponse.status}`,
-        );
-      }
+      const manifestResponse = await fetchWithFallback("data/site.json");
       const manifest = await manifestResponse.json();
       const files =
         manifest.content && Array.isArray(manifest.content.blog_files)
