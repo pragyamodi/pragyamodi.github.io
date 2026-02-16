@@ -21,6 +21,69 @@
     );
   }
 
+  function uniqueSortedPaths(paths) {
+    const unique = Array.from(
+      new Set(
+        (paths || [])
+          .map((path) => String(path || "").trim())
+          .filter((path) => path.endsWith(".md")),
+      ),
+    );
+    return unique.sort((a, b) => b.localeCompare(a));
+  }
+
+  async function discoverBlogFilesFromDirectory() {
+    try {
+      const response = await fetchWithFallback("content/blog/");
+      const html = await response.text();
+      const matches = html.matchAll(/href="([^"]+\.md)"/g);
+      const files = [];
+
+      for (const match of matches) {
+        const href = match[1];
+        if (href.startsWith("http://") || href.startsWith("https://")) continue;
+        if (href.includes("..")) continue;
+
+        if (href.startsWith("content/blog/")) {
+          files.push(href);
+          continue;
+        }
+
+        const cleanHref = href.startsWith("/") ? href.slice(1) : href;
+        files.push(`content/blog/${cleanHref}`);
+      }
+
+      return uniqueSortedPaths(files);
+    } catch (_error) {
+      return [];
+    }
+  }
+
+  async function discoverBlogFilesFromGitHub(repo) {
+    const repoName = repo || "pragyamodi/pragyamodi.github.io";
+    const url = `https://api.github.com/repos/${repoName}/contents/content/blog`;
+
+    try {
+      const response = await fetch(url, {
+        headers: { Accept: "application/vnd.github+json" },
+      });
+      if (!response.ok) return [];
+
+      const items = await response.json();
+      if (!Array.isArray(items)) return [];
+
+      const files = items
+        .filter(
+          (item) => item && item.type === "file" && /\.md$/i.test(item.name),
+        )
+        .map((item) => item.path);
+
+      return uniqueSortedPaths(files);
+    } catch (_error) {
+      return [];
+    }
+  }
+
   function stripQuotes(value) {
     const trimmed = value.trim();
     if (
@@ -117,10 +180,25 @@
     try {
       const manifestResponse = await fetchWithFallback("data/site.json");
       const manifest = await manifestResponse.json();
-      const files =
+      const configuredFiles =
         manifest.content && Array.isArray(manifest.content.blog_files)
           ? manifest.content.blog_files
           : [];
+      const repo =
+        manifest.profile && typeof manifest.profile.github_repo === "string"
+          ? manifest.profile.github_repo
+          : "";
+
+      const directoryDiscoveredFiles = await discoverBlogFilesFromDirectory();
+      const githubDiscoveredFiles = directoryDiscoveredFiles.length
+        ? []
+        : await discoverBlogFilesFromGitHub(repo);
+
+      const files = uniqueSortedPaths([
+        ...directoryDiscoveredFiles,
+        ...githubDiscoveredFiles,
+        ...configuredFiles,
+      ]);
 
       const entries = await Promise.all(files.map(fetchMarkdown));
       list.innerHTML = "";

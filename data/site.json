@@ -1,7 +1,8 @@
 {
   "profile": {
     "name": "Pragya Modi",
-    "site": "pragyamodi.github.io"
+    "site": "pragyamodi.github.io",
+    "github_repo": "pragyamodi/pragyamodi.github.io"
   },
   "content": {
     "blog_dir": "content/blog",

@@ -26,4 +26,6 @@ For files in `content/blog/`, include:
 - `source: "website"` for blogs hosted on this site
 - `source: "external"` for blogs published on external platforms
 
+Blog posts are auto-discovered from `content/blog/`, so you usually do not need to update `data/site.json` manually for new blog files.
+
 This keeps all content versioned in Git while the site stays fully static.
