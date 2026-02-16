@@ -1,0 +1,54 @@
+[
+  {
+    "title": "MSc Artificial Intelligence",
+    "organisation": "University of Edinburgh",
+    "date": "2023 - 2025",
+    "grade": "Merit",
+    "thesis": "From Wearables to Clinical Insight: Interpretable Machine Learning Models of Adolescent Depression Using the Adolescent Brain Cognitive Development (ABCD) Study.",
+    "courses": [
+      "Bioinformatics",
+      "Computational Neuroscience",
+      "Types and Semantics of Programming Language",
+      "Attachment Wellbeing and Mental Health",
+      "Reinforcement Learning",
+      "Computer Graphics"
+    ]
+  },
+  {
+    "title": "BSc Computer Science (Machine Learning and AI)",
+    "organisation": "University of London",
+    "date": "2019 - 2022",
+    "grade": "First Class Honours",
+    "thesis": "Deep learning Model to predict Alzheimer's Disease.",
+    "courses": [
+      "Artificial Intelligence",
+      "Machine Learning and Neural Networks",
+      "Intelligent Signal Processing",
+      "Graphics Programming",
+      "Agile Software Project",
+      "Algorithms and Data Structures",
+      "Computational Mathematics",
+      "Computer Security",
+      "Databases",
+      "Networks and the Web"
+    ]
+  },
+  {
+    "title": "BSc (Hons) Psychology (BPS Accredited)",
+    "organisation": "Arden University",
+    "date": "2020 - 2023",
+    "grade": "First Class Honours",
+    "thesis": "Females in Gaming: Threats or Mythical Creatures. The Male gamer's perspective.",
+    "courses": [
+      "Brain and Behavior",
+      "Advanced Topics in Cognitive Psychology",
+      "Contemporary Developmental Psychology",
+      "Mental Health and Illness",
+      "Qualitative Research Methods",
+      "Quantitative Research Methods",
+      "Cross-Cultural Psychology",
+      "Occupational Psychology",
+      "Personality and Intelligence"
+    ]
+  }
+]

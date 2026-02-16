@@ -1,0 +1,37 @@
+{
+  "profile": {
+    "name": "Pragya Modi",
+    "site": "pragyamodi.github.io"
+  },
+  "content": {
+    "blog_dir": "content/blog",
+    "blog_files": [
+      "content/blog/2026-02-maybe-elm-can-think.md",
+      "content/blog/2026-01-maybe-elm-can-help.md"
+    ],
+    "work_experience_dir": "content/work-experiences",
+    "research_experience_dir": "content/research-experiences",
+    "work_experience_files": [
+      "content/work-experiences/personal-project-ai-mental-health-app.md",
+      "content/work-experiences/generative-ai-training-and-adoption.md",
+      "content/work-experiences/digital-skills-trainer-generative-ai-and-data.md",
+      "content/work-experiences/lecturing-assistant-arden-university.md",
+      "content/work-experiences/social-media-content-manager-cityogini.md",
+      "content/work-experiences/software-developer-grepsale.md"
+    ],
+    "research_experience_files": [
+      "content/research-experiences/pod-project-manager-research-analyst-hyped.md",
+      "content/research-experiences/research-assistant-various-organizations.md"
+    ],
+    "education_json": "data/education.json",
+    "volunteering_files": [
+      "content/volunteering/foss-social-student-lead.md",
+      "content/volunteering/bsc-psychology-student-representative.md",
+      "content/volunteering/student-ambassador-bps.md"
+    ],
+    "talks_json": "data/talks.json",
+    "awards_json": "data/awards.json",
+    "certifications_json": "data/certifications.json"
+  },
+  "notes": "Optional metadata file for future scripts or build steps."
+}
